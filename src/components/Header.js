@@ -1,7 +1,7 @@
 import food from '../static/food2.png';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
-import UserContext from '../utils/userContext';
+import UserContext from '../utils/UserContext';
 //named exports
 export const Title = () => (
   <Link to='/'>
@@ -11,6 +11,7 @@ export const Title = () => (
 
 const Header = () => {
   const { user } = useContext(UserContext);
+  console.log('here', user);
 
   return (
     <header className='w-full h-max sm:flex justify-evenly items-center shadow-md sticky top-0 z-50 bg-white '>
